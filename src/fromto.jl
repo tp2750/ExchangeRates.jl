@@ -18,7 +18,7 @@ function get_rates_dict(; url="https://www.ecb.europa.eu/stats/eurofxref/eurofxr
     end
     d["€"] = d["EUR"]
     d["£"] = d["GBP"]
-    d["¥"] = d["JYP"]
+    d["¥"] = d["JPY"]
     d
 end
 
