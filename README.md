@@ -68,3 +68,9 @@ julia> fromto(:EUR,:GBP)*100
 86.706
 ```
 
+# TODO
+
+Integrate with 
+
+* [Currencies.jl](https://github.com/JuliaFinance/Currencies.jl)
+* [UnitfulAssets](https://github.com/rmsrosa/UnitfulAssets.jl)
