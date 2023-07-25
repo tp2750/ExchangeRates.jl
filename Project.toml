@@ -8,6 +8,7 @@ EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 
 [compat]
+HTTP = "1"
 julia = "1"
 
 [extras]
