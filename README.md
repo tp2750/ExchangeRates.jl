@@ -68,6 +68,11 @@ julia> fromto(:EUR,:GBP)*100
 86.706
 ```
 
+# Updating data
+
+Currently exchange rates are fetched when the moduls is build.
+To refresh that data, run `refresh()`
+
 # TODO
 
 Integrate with 
