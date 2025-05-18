@@ -1,7 +1,7 @@
 name = "ExchangeRates"
 uuid = "41b83a75-29e0-460a-8ec7-27bd549dfa6e"
 authors = ["Thomas Poulsen <ta.poulsen@gmail.com> and contributors"]
-version = "0.3.0"
+version = "0.3.1"
 
 [deps]
 EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"

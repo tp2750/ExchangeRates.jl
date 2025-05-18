@@ -10,13 +10,13 @@ The purpose of this package is to provide a convenient interface to working with
 
 ## Data
 
-The data is downloaded from the European Centtral Bank, when the package is loaded.
+The data is downloaded from the European Central Bank, when the package is loaded.
 
 It uses this link: <https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml>.
 
 ## Barewords
 
-The simples interface looks like this:
+The simplest interface looks like this:
 
 ``` julia
 julia> 100EUR/DKK
