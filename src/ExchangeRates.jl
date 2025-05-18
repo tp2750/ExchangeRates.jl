@@ -2,12 +2,15 @@ module ExchangeRates
 
 using EzXML
 using HTTP
+# using Scratch
 
-include("fromto.jl")
 export exchage_rates, fromto, refresh
 
-include("consts.jl")
-# exports EUR, USD, DKK etc
-
+function __init__()
+    include("src/fromto.jl")
+    
+    include("src/consts.jl")
+    # exports EUR, USD, DKK etc
+end
 
 end

@@ -31,6 +31,9 @@ function fromto(from, to; exchange_rates = exchange_rates, url="https://www.ecb.
     exchange_rates[string(to)] / exchange_rates[string(from)]
 end
 
+fromto(from::Float64, to::Float64) = to/from
+
 function refresh()
+    @info "Updating rates"
     exchange_rates = get_rates_dict()
 end
