@@ -1,8 +1,3 @@
-try
-    symlink("../src", "src")
-catch e
-end
-
 using ExchangeRates
 using Test
 
