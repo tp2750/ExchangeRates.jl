@@ -4,7 +4,7 @@ using EzXML
 using HTTP
 # using Scratch # TODO use this to cache values for use off-line?
 
-export exchage_rates, fromto, refresh
+export fromto #, refresh, exchage_rates
 
 function __init__()
     # Update rates at module load-time. From julia v1.10 we can not do it at compiletime

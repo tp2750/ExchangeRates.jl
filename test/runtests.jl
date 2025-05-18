@@ -1,6 +1,7 @@
 using ExchangeRates
 using Test
 
+include("Aqua.jl")
 
 @testset "ExchangeRates.jl" begin
     @test € == EUR == 1.0
