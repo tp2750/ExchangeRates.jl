@@ -18,15 +18,10 @@ function __init__()
     eval(Meta.parse(join(["export $x " for x in keys(exchange_rates)], ";")));
 end
 
-function get_xml(; url="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
+function get_rates_dict(; url="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
     @info "Fetching rates from $url"
     r1 = HTTP.get(url, ["Accept" => "application/xml"];status_exception=false) 
-    r2 = String(r1.body)
-    r2
-end
-
-function get_rates_dict(; url="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
-    s1 = get_xml(url=url)
+    s1 = String(r1.body)
     x1 = EzXML.parsexml(s1)
     d1 = x1.root
     d = Dict("EUR" => 1.0)
@@ -39,10 +34,7 @@ function get_rates_dict(; url="https://www.ecb.europa.eu/stats/eurofxref/eurofxr
     d
 end
 
-function fromto(from, to; exchange_rates = exchange_rates, url="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml")
-    if !(typeof(exchange_rates) <: Dict)
-        exchange_rates = get_rates_dict(url=url)
-    end
+function fromto(from, to)
     exchange_rates[string(to)] / exchange_rates[string(from)]
 end
 

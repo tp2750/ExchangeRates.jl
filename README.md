@@ -41,10 +41,53 @@ julia> 100 * DKK
 
 ```
 
+## Listing exchange reates
+
+The exchange rates are stred in the dict `exchange_rates` in the module:
+
+``` julia
+julia> sort(ExchangeRates.exchange_rates)
+OrderedCollections.OrderedDict{String, Float64} with 34 entries:
+  "AUD" => 1.7569
+  "BGN" => 1.9558
+  "BRL" => 6.4721
+  "CAD" => 1.563
+  "CHF" => 0.9299
+  "CNY" => 8.1197
+  "CZK" => 24.915
+  "DKK" => 7.4594
+  "EUR" => 1.0
+  "GBP" => 0.8382
+  "HKD" => 8.8508
+  "HUF" => 403.55
+  "IDR" => 18382.9
+  "ILS" => 4.0931
+  "INR" => 96.552
+  "ISK" => 145.0
+  "JPY" => 161.13
+  "KRW" => 1555.77
+  "MXN" => 21.854
+  "MYR" => 4.7815
+  "NOK" => 11.522
+  "NZD" => 1.9012
+  "PHP" => 62.531
+  "PLN" => 4.2603
+  "RON" => 5.0517
+  "SEK" => 10.8348
+  "SGD" => 1.4555
+  "THB" => 36.779
+  "TRY" => 44.108
+  "USD" => 1.1301
+  "ZAR" => 20.3253
+  "£"   => 0.8382
+  "¥"   => 161.13
+  "€"   => 1.0
+```
+
 ## Function interface
 
 The package exports a single function `fromto`. 
-It converts from the first argument to the second argument.
+It gives the conversion rate from the first argument to the second argument.
 
 ``` julia
 julia> fromto(:EUR,:DKK)*100
